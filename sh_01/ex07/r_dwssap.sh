@@ -7,6 +7,9 @@
 # sort in reverse alphabetic order
 # select between ftlines
 
+FT_LINE1=2
+FT_LINE2=8
+
 cat /etc/passwd | \
   grep -v '^#' | \
   awk 'NR % 2 == 0' | \

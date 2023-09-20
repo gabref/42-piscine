@@ -1,2 +1,2 @@
 #!/bin/sh
-find . | wc -l
+find . -not -name ".*" | wc -l

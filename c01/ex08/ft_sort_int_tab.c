@@ -6,15 +6,15 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:19:34 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/24 15:24:37 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:17:27 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int i;
-	int j;
-	int key;
+	int	i;
+	int	j;
+	int	key;
 
 	i = 1;
 	j = 0;

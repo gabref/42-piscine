@@ -6,13 +6,13 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 14:56:39 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/24 15:18:51 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:16:35 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static void ft_swap(int *a, int *b)
+void	ft_swap2(int *a, int *b)
 {
-	int temp;
+	int	temp;
 
 	temp = *a;
 	*a = *b;
@@ -21,12 +21,12 @@ static void ft_swap(int *a, int *b)
 
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < size / 2)
 	{
-		ft_swap(&tab[i], &tab[size - i - 1]);
+		ft_swap2(&tab[i], &tab[size - i - 1]);
 		i++;
 	}
 }

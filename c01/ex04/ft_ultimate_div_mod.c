@@ -6,13 +6,13 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 20:59:34 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/23 21:18:01 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:13:18 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void 	ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int t;
+	int	t;
 
 	t = *a % *b;
 	*a = *a / *b;

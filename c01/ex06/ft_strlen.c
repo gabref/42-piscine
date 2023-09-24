@@ -6,15 +6,16 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 22:45:09 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/23 23:40:43 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:18:22 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (str[i++] != '\0');
-	return i;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

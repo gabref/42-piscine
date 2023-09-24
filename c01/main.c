@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 21:03:26 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/24 15:29:24 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:23:10 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,26 @@ int main(int argc, char **argv)
 		ft_rev_int_tab_test();
 	if (strcmp(argv[1], "8") == 0)
 		ft_sort_int_tab_test();
+	
+	if (strcmp(argv[1], "all") == 0)
+	{
+		ft_ft_test();
+		printf("\n");
+		ft_ultimate_ft_test();
+		printf("\n");
+		ft_swap_test();
+		printf("\n");
+		ft_div_mod_test();
+		printf("\n");
+		ft_ultimate_div_mod_test();
+		printf("\n");
+		ft_putstr_test();
+		printf("\n");
+		ft_strlen_test();
+		printf("\n");
+		ft_rev_int_tab_test();
+		printf("\n");
+		ft_sort_int_tab_test();
+		printf("\n");
+	}
 }

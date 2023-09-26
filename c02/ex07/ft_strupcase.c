@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 11:52:27 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/26 14:17:50 by galves-f         ###   ########.fr       */
+/*   Created: 2023/09/26 14:49:55 by galves-f          #+#    #+#             */
+/*   Updated: 2023/09/26 15:14:48 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strupcase(char *str)
 {
-	int	i;
-
+	int i;
+	
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] -= 32;
+		}
 		i++;
 	}
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	return (str);
 }

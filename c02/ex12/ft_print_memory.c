@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 04:01:59 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/27 09:00:45 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/27 09:17:49 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 typedef unsigned char	t_byte;
 
-// TODO
-void	ft_putchar(char c);
+void	ft_putcharr(char c)
+{
+	write(1, &c, 1);
+}
 
 void	ft_print_byte_hex(t_byte byte)
 {
@@ -33,13 +35,13 @@ void	ft_print_byte_hex(t_byte byte)
 	_4_upper_bits = (byte & 0b11110000) >> 4;
 	_4_lower_bits = byte & 0b00001111;
 	if (_4_upper_bits < 10)
-		ft_putchar(48 + _4_upper_bits);
+		ft_putcharr(48 + _4_upper_bits);
 	else
-		ft_putchar(87 + _4_upper_bits);
+		ft_putcharr(87 + _4_upper_bits);
 	if (_4_lower_bits < 10)
-		ft_putchar(48 + _4_lower_bits);
+		ft_putcharr(48 + _4_lower_bits);
 	else
-		ft_putchar(87 + _4_lower_bits);
+		ft_putcharr(87 + _4_lower_bits);
 }
 
 void	ft_print_address_hex(void *s)
@@ -54,7 +56,7 @@ void	ft_print_address_hex(void *s)
 		ft_print_byte_hex(*(ptr_byte + little_endian));
 		little_endian--;
 	}
-	ft_putchar(':');
+	ft_putcharr(':');
 }
 
 void	ft_print_str_hex(void *str, unsigned int size, short limit)
@@ -65,19 +67,19 @@ void	ft_print_str_hex(void *str, unsigned int size, short limit)
 	while (--size && limit--)
 	{
 		if (!(i % 2))
-			ft_putchar(' ');
+			ft_putcharr(' ');
 		ft_print_byte_hex(*((t_byte *)str + i));
 		i++;
 	}
-	ft_putchar(' ');
+	ft_putcharr(' ');
 	if (i % 2)
-		ft_putchar(' ');
+		ft_putcharr(' ');
 	while (limit-- > 0)
 	{
-		ft_putchar(' ');
-		ft_putchar(' ');
+		ft_putcharr(' ');
+		ft_putcharr(' ');
 		if (i++ % 2)
-			ft_putchar(' ');
+			ft_putcharr(' ');
 	}
 }
 
@@ -86,16 +88,16 @@ void	ft_print_content_dot(void *str, unsigned int size, short limit)
 	while (--size && limit--)
 	{
 		if (*(char *)str >= 32 && *(char *)str < 127)
-			ft_putchar(*((char *)str));
+			ft_putcharr(*((char *)str));
 		else
-			ft_putchar('.');
+			ft_putcharr('.');
 		str++;
 	}
 	while (limit-- > 0)
 	{
-		ft_putchar(' ');
+		ft_putcharr(' ');
 	}
-	ft_putchar('\n');
+	ft_putcharr('\n');
 }
 
 void	*ft_print_memory(void *addr, unsigned int size)

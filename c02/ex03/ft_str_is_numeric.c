@@ -6,11 +6,11 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 14:18:29 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/26 14:22:31 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/27 05:47:52 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_numeric(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	while (*str)
 	{

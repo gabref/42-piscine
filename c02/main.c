@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 21:03:26 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/26 17:17:49 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/27 04:51:37 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ void	ft_str_is_printable_test(void);
 void	ft_strupcase_test(void);
 void	ft_strlowcase_test(void);
 void	ft_strcapitalize_test(void);
+void 	ft_strlcpy_test(void);
+void	ft_putstr_non_printable_test(void);
+void	ft_print_memory_test(void);
 
 int main(int argc, char **argv)
 {
@@ -52,6 +55,12 @@ int main(int argc, char **argv)
 		ft_strlowcase_test();
 	if (strcmp(argv[1], "9") == 0)
 		ft_strcapitalize_test();
+	if (strcmp(argv[1], "10") == 0)
+		ft_strlcpy_test();
+	if (strcmp(argv[1], "11") == 0)
+		ft_putstr_non_printable_test();
+	if (strcmp(argv[1], "12") == 0)
+		ft_print_memory_test();
 
 	if (strcmp(argv[1], "all") == 0)
 	{
@@ -66,5 +75,8 @@ int main(int argc, char **argv)
 		ft_strupcase_test();
 		ft_strlowcase_test();
 		ft_strcapitalize_test();
+		ft_strlcpy_test();
+		ft_putstr_non_printable_test();
+		ft_print_memory_test();
 	}
 }

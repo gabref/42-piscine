@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 17:44:47 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/27 03:25:06 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/27 08:59:12 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int ft_strlen(char *str)
 
 unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
 	if (size == 0)

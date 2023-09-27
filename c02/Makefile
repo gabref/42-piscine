@@ -1,5 +1,5 @@
 MAIN = main.c
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = $(wildcard ex*/ft_*.c)

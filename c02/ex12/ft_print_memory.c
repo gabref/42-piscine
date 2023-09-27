@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 04:01:59 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/27 06:00:14 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/27 09:00:45 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,6 @@ void	ft_print_content_dot(void *str, unsigned int size, short limit)
 
 void	*ft_print_memory(void *addr, unsigned int size)
 {
-	int	i;
 	int	limit;
 
 	limit = 16;

@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 03:30:36 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/27 06:02:29 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/27 08:59:41 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_putstr_non_printable(char *str)
 {
 	while (*str)
 	{
-		if (*str < 32 && *str > 0 || *str == 127)
+		if ((*str < 32 && *str > 0) || *str == 127)
 		{
 			ft_putchar('\\');
 			if (*str < 16)

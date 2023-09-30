@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 10:08:17 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/29 10:23:18 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/09/30 20:05:05 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	if (n == 0)
 		return (0);
 	else
-	 	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+		return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }

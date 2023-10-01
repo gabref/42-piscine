@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 04:01:59 by galves-f          #+#    #+#             */
-/*   Updated: 2023/09/29 10:05:24 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/01 19:22:12 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,15 +101,31 @@ void	ft_print_content_dot(void *str, unsigned int size, short limit)
 	ft_putcharr('\n');
 }
 
+#include <stdio.h>
 void	*ft_print_memory(void *addr, unsigned int size)
 {
 	int	limit;
+	char *str;
+	char *str_in_limit;
+	int i;
+	int chunk_size;
 
 	limit = 16;
+	chunk_size = 0;
+	i = 0;
 	if (size == 1 || size == 0 || addr == NULL)
 		return (addr);
-	ft_print_address_hex(addr);
-	ft_print_str_hex(addr, size, limit);
-	ft_print_content_dot(addr, size, limit);
+	str = (char *) addr;
+	while (i < size)
+	{
+		while (str[chunk_size] != '\0' && chunk_size++ <= limit);
+		chunk_size += 2;
+		ft_print_address_hex(str);
+		ft_print_str_hex(str, chunk_size, limit);
+		ft_print_content_dot(str, chunk_size, limit);
+		chunk_size = 0;
+		while (i < size && ++i % (limit + 1) != 0)
+			str++;
+	}
 	return (addr);
 }

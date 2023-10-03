@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 19:24:41 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/01 19:35:33 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/03 18:56:08 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_putnbr(int nb)
 		ft_putchar('-');
 		ft_putnbr(-nb);
 	}
-	else if (nb > 10)
+	else if (nb > 9)
 	{
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);

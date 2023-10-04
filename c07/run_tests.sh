@@ -34,9 +34,9 @@ echo "${GREEN}Ex01 ft_range ...${NORMAL}"
 gcc -Wall -Werror -Wextra tests/test01.c ex01/ft_range.c -o main && ./main
 
 # echo "\n- - - - - - - - - - -"
-# echo "${GREEN}Ex02 ft_putnbr ...${NORMAL}"
-# gcc -Wall -Werror -Wextra tests/test02.c ex02/ft_putnbr.c -o main && ./main
-#
+# echo "${GREEN}Ex02 ft_ultimate_range ...${NORMAL}"
+# gcc -Wall -Werror -Wextra tests/test02.c ex02/ft_ultimate_range.c -o main && ./main
+
 # echo "\n- - - - - - - - - - -"
 # echo "${GREEN}Ex03 ft_atoi ...${NORMAL}"
 # gcc -Wall -Werror -Wextra tests/test03.c ex03/ft_atoi.c -o main && ./main

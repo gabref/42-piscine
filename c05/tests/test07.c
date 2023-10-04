@@ -1,3 +1,4 @@
+#include <limits.h>
 #include <stdio.h>
 
 static void red () {
@@ -35,5 +36,6 @@ int main(void)
 	ft_test(729, 733);
 	ft_test(34, 37);
 	ft_test(72, 73);
+	ft_test(INT_MAX, INT_MAX);
 	return (0);
 }

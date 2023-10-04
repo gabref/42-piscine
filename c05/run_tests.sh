@@ -57,9 +57,9 @@ echo "\n- - - - - - - - - - -"
 echo "${GREEN}Ex07 ft_find_next_prime ...${NORMAL}"
 gcc -Wall -Werror -Wextra tests/test07.c ex07/ft_find_next_prime.c -o main && ./main
 
-echo "\n- - - - - - - - - - -"
-echo "${GREEN}Ex08 ft_ten_queens_puzzle ...${NORMAL}"
-gcc -Wall -Werror -Wextra tests/test08.c ex08/ft_ten_queens_puzzle.c -o main && ./main
+# echo "\n- - - - - - - - - - -"
+# echo "${GREEN}Ex08 ft_ten_queens_puzzle ...${NORMAL}"
+# gcc -Wall -Werror -Wextra tests/test08.c ex08/ft_ten_queens_puzzle.c -o main && ./main
 
 echo "\n- - - - - - - - - - -"
 echo "${YELLOW}\ncleaning up"

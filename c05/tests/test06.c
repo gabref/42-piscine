@@ -30,7 +30,7 @@ int main(void)
 	ft_test(0, 0);
 	ft_test(1, 0);
 	ft_test(-432, 0);
-	ft_test(2, 0);
+	ft_test(2, 1);
 	ft_test(3, 1);
 	ft_test(729, 0);
 	ft_test(37, 1);

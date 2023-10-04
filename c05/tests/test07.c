@@ -27,10 +27,10 @@ void 	ft_test(int test, int expect)
 
 int main(void)
 {
-	ft_test(0, 3);
-	ft_test(1, 3);
-	ft_test(-432, 3);
-	ft_test(2, 3);
+	ft_test(0, 2);
+	ft_test(1, 2);
+	ft_test(-432, 2);
+	ft_test(2, 2);
 	ft_test(3, 3);
 	ft_test(729, 733);
 	ft_test(34, 37);

@@ -6,37 +6,43 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 16:06:17 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/02 16:27:25 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/04 13:35:46 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
+enum e_prime
 {
-	int	root;
+	is_not_prime,
+	is_prime
+};
 
-	if (nb < 1)
-		return (0);
-	if (nb < 3)
+int	ft_sqrt(int n)
+{
+	int	k;
+
+	if (n < 0)
+		return (-1);
+	if (n < 2)
 		return (1);
-	root = 0;
-	while (root * root < nb)
-		root++;
-	return (root);
+	k = 0;
+	while (k * k <= n)
+		k++;
+	return (--k);
 }
 
 int	ft_is_prime(int nb)
 {
-	int	sqrt;
 	int	i;
+	int	sqrt;
 
-	if (nb < 3)
+	if (nb < 2)
 		return (0);
-	i = 2;
 	sqrt = ft_sqrt(nb);
-	while (i < sqrt)
+	i = 2;
+	while (i <= sqrt)
 		if (nb % i++ == 0)
-			return (0);
-	return (1);
+			return (is_not_prime);
+	return (is_prime);
 }
 
 int	ft_find_next_prime(int nb)

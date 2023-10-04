@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:43:21 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/02 16:20:54 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/04 13:34:27 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ int	ft_is_prime(int nb)
 	int	i;
 	int	sqrt;
 
-	if (nb < 3)
+	if (nb < 2)
 		return (0);
 	sqrt = ft_sqrt(nb);
 	i = 2;
-	while (i < sqrt)
+	while (i <= sqrt)
 		if (nb % i++ == 0)
 			return (is_not_prime);
 	return (is_prime);

@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:50:36 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/03 17:53:02 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/04 13:53:35 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ft_sort_by_first(char **str_array, int size)
 
 int	main(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	ft_sort_by_first(argv, argc);

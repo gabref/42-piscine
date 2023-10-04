@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:46:05 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/03 16:50:10 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/04 13:53:18 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putstr(char *str)
 
 int	main(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = argc - 1;
 	while (i > 0)

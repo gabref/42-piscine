@@ -33,21 +33,21 @@ echo "\n- - - - - - - - - - -"
 echo "${GREEN}Ex01 ft_range ...${NORMAL}"
 gcc -Wall -Werror -Wextra tests/test01.c ex01/ft_range.c -o main && ./main
 
-# echo "\n- - - - - - - - - - -"
-# echo "${GREEN}Ex02 ft_ultimate_range ...${NORMAL}"
-# gcc -Wall -Werror -Wextra tests/test02.c ex02/ft_ultimate_range.c -o main && ./main
+echo "\n- - - - - - - - - - -"
+echo "${GREEN}Ex02 ft_ultimate_range ...${NORMAL}"
+gcc -Wall -Werror -Wextra tests/test02.c ex02/ft_ultimate_range.c -o main && ./main
 
-# echo "\n- - - - - - - - - - -"
-# echo "${GREEN}Ex03 ft_atoi ...${NORMAL}"
-# gcc -Wall -Werror -Wextra tests/test03.c ex03/ft_atoi.c -o main && ./main
-#
-# echo "\n- - - - - - - - - - -"
-# echo "${GREEN}Ex04 ft_putnbr_base ...${NORMAL}"
-# gcc -Wall -Werror -Wextra tests/test04.c ex04/ft_putnbr_base.c -o main && ./main
-#
-# echo "\n- - - - - - - - - - -"
-# echo "${GREEN}Ex05 ft_atoi_base ...${NORMAL}"
-# gcc -Wall -Werror -Wextra tests/test05.c ex05/ft_atoi_base.c -o main && ./main
+echo "\n- - - - - - - - - - -"
+echo "${GREEN}Ex03 ft_strjoin ...${NORMAL}"
+gcc -Wall -Werror -Wextra tests/test03.c ex03/ft_strjoin.c -o main && ./main
+
+echo "\n- - - - - - - - - - -"
+echo "${GREEN}Ex04 ft_convert_base ...${NORMAL}"
+gcc -Wall -Werror -Wextra tests/test04.c ex04/ft_convert_base.c ex04/ft_convert_base2.c -o main && ./main
+
+echo "\n- - - - - - - - - - -"
+echo "${GREEN}Ex05 ft_split ...${NORMAL}"
+gcc -Wall -Werror -Wextra tests/test05.c ex05/ft_split.c -o main && ./main
 
 echo "\n- - - - - - - - - - -"
 echo "${YELLOW}\ncleaning up"

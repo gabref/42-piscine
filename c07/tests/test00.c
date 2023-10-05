@@ -21,7 +21,6 @@ char	*ft_strdup(char *src);
 
 void 	ft_test(char *test, char *expect)
 {
-	printf("i get here");
 	char *result = ft_strdup(test);
 	if (result != NULL)
 	{

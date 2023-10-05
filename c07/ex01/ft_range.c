@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 19:46:31 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/04 15:29:12 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/05 05:23:12 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	*ft_range(int min, int max)
 {
-	int i;
-	int *range;
+	int	i;
+	int	*range;
 
 	if (min >= max)
 		return (NULL);

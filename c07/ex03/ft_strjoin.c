@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 05:22:16 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/05 12:05:27 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/06 05:38:50 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		return ((char *) malloc(sizeof(char)));
 	size_of_sep = ft_strlen(sep);
 	total_size = 0;
+	i = 0;
 	while (i < size)
 		total_size += ft_strlen(*(strs + i++));
 	total_size += (size - 1) * size_of_sep;

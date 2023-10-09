@@ -5,56 +5,61 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 21:13:37 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/09 18:58:12 by galves-f         ###   ########.fr       */
+/*   Created: 2023/10/09 21:34:10 by galves-f          #+#    #+#             */
+/*   Updated: 2023/10/09 21:34:13 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int	ft_str_length(char *str)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	index = 0;
+	while (str[index])
+		index++;
+	return (index);
 }
 
-char	*ft_strdup(char *str)
+char	*ft_strdup(char *src)
 {
-	int		i;
-	char	*cpy;
+	int		index;
+	char	*dest;
+	char	*d;
 
-	i = -1;
-	cpy = (char *) malloc(sizeof(char) * ft_strlen(str));
-	if (cpy == NULL)
+	index = 0;
+	d = (dest = (char *)malloc(ft_str_length(src) * sizeof(char) + 1));
+	if (!d)
 		return (0);
-	while (str[++i])
-		cpy[i] = str[i];
-	cpy[i] = '\0';
-	return (cpy);
+	while (src[index])
+	{
+		dest[index] = src[index];
+		index++;
+	}
+	dest[index] = '\0';
+	return (dest);
 }
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	t_stock_str	*stock;
-	int			i;
+	int					index;
+	struct s_stock_str	*array;
+	struct s_stock_str	*d;
 
-	stock = (t_stock_str *) malloc(sizeof(t_stock_str) * (ac + 1));
-	if (stock == NULL)
+	d = (array = malloc((ac + 1) * sizeof(struct s_stock_str)));
+	if (!d)
 		return (NULL);
-	i = 0;
-	while (i < ac)
+	index = 0;
+	while (index < ac)
 	{
-		stock[i].size = ft_strlen(av[i]);
-		stock[i].str = av[i];
-		stock[i].copy = ft_strdup(av[i]);
-		i++;
+		array[index].size = ft_str_length(av[index]);
+		array[index].str = av[index];
+		array[index].copy = ft_strdup(av[index]);
+		index++;
 	}
-	stock[i].str = 0;
-	stock[i].copy = 0;
-	return (stock);
+	array[index].str = 0;
+	array[index].copy = 0;
+	return (array);
 }

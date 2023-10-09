@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:15:36 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/05 20:18:15 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:31:19 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_is_charset(char c, char *charset)
 	int	i;
 
 	i = 0;
-	while (charset[i])
+	while (charset[i] != '\0')
 	{
 		if (c == charset[i])
 			return (1);
@@ -40,8 +40,12 @@ int	ft_count_words(char *str, char *charset)
 	words_count = 0;
 	while (str[i] != '\0')
 	{
-		if ((i == 0 && !ft_is_charset(str[i], charset))
-			|| ft_is_beg_word(str[i], str[i - 1], charset))
+		if (i == 0)
+		{
+			if (!ft_is_charset(str[i], charset))
+				words_count++;
+		}
+		else if (ft_is_beg_word(str[i], str[i - 1], charset))
 			words_count++;
 		i++;
 	}
@@ -60,7 +64,7 @@ char	*ft_get_n_word(char *str, char *charset, int n_idx)
 	words_count = 0;
 	while (words_count <= n_idx && str[++i] != '\0')
 		if ((i == 0 && !ft_is_charset(str[i], charset))
-			|| ft_is_beg_word(str[i], str[i - 1], charset))
+			|| (i != 0 && ft_is_beg_word(str[i], str[i - 1], charset)))
 			words_count++;
 	start = i;
 	while (str[++i] != '\0')

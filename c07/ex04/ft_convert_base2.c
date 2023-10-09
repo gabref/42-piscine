@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:33:05 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/05 09:37:50 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:20:32 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int	ft_check_double_char(char *str)
 	int	j;
 
 	i = 0;
-	while (str[i + 1])
+	while (str[i] != '\0')
 	{
 		j = i + 1;
-		while (str[j])
-			if (str[i] == str[i + j++])
+		while (str[j] != '\0')
+			if (str[i] == str[j++])
 				return (1);
 		i++;
 	}
@@ -54,7 +54,7 @@ int	ft_check_base(char *base)
 	if (ft_check_double_char(base))
 		return (0);
 	i = 0;
-	while (base[i])
+	while (base[i] != '\0')
 		if (ft_str_contains_char("+- \t\r\n\v\f", base[i++]))
 			return (0);
 	return (1);

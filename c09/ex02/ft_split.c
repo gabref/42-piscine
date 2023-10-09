@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 14:55:59 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/09 16:44:46 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/09 18:55:42 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,24 +73,28 @@ char	**ft_split(char *str, char *charset)
 	int		i;
 
 	words = count_words(str, charset);
-	splitted = (char **) malloc(sizeof(char) * (words + 1));
-	while (i < words)
+	splitted = (char **) malloc(sizeof(char *) * (words + 1));
+	i = -1;
+	while (++i < words)
 		splitted[i] = get_n_word(str, charset, i);
+	splitted[i] = 0;
 	return (splitted);
 }
 
 int main(int ac, char **av)
 {
-	if (ac > 1)
+	if (ac > 2)
 	{
-		printf("words count: %d\n", count_words(av[1], av[2]));
-		printf("%s\n", get_n_word(av[1], av[2], 0));
-		printf("%s\n", get_n_word(av[1], av[2], 1));
-		printf("%s\n", get_n_word(av[1], av[2], 2));
-		printf("%s\n", get_n_word(av[1], av[2], 3));
-		printf("%s\n", get_n_word(av[1], av[2], 4));
-		printf("%s\n", get_n_word(av[1], av[2], 5));
-		printf("%s\n", get_n_word(av[1], av[2], 6));
+		int i = 0;
+		char **test = ft_split(av[1], av[2]);
+		printf("input: %s, sep: %s\n", av[1], av[2]);
+		while (test[i])
+		{
+			printf("%d - %s\n", i, test[i]);
+			free(test[i]);
+			i++;
+		}
+		free(test);
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: galves-f <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:13:37 by galves-f          #+#    #+#             */
-/*   Updated: 2023/10/05 21:47:54 by galves-f         ###   ########.fr       */
+/*   Updated: 2023/10/09 18:58:12 by galves-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -40,8 +40,8 @@ char	*ft_strdup(char *str)
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	t_stock_str *stock;
-	int i;
+	t_stock_str	*stock;
+	int			i;
 
 	stock = (t_stock_str *) malloc(sizeof(t_stock_str) * (ac + 1));
 	if (stock == NULL)

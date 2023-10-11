@@ -37,7 +37,7 @@ int main()
 	strs[3] = "vai";
 
 	ft_test(0, NULL, ",", "");
-	ft_test(1, strs, ", ", "ciao");
+	ft_test(1, strs, "          ", "ciao");
 	ft_test(4, strs, ", ", "ciao, bella, come, vai");
 	ft_test(4, strs, "", "ciaobellacomevai");
 
